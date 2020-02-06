@@ -5,14 +5,15 @@ from flask_cors import CORS
 import time
 import shortQuery
 import mathUtl
+import os
 
 mysql = MySQL()
 app = Flask(__name__)
 CORS(app)
-app.config['MYSQL_DATABASE_USER'] = 'phly'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'phlyisthebest'
+app.config['MYSQL_DATABASE_USER'] = os.environ['MYSQL_DATABASE_USER']
+app.config['MYSQL_DATABASE_PASSWORD'] = os.environ['MYSQL_DATABASE_PASSWORD']
 app.config['MYSQL_DATABASE_DB'] = 'phly'
-app.config['MYSQL_DATABASE_HOST'] = 'phly.c7jx0v6pormd.us-east-1.rds.amazonaws.com'
+app.config['MYSQL_DATABASE_HOST'] = os.environ['MYSQL_DATABASE_HOST']
 mysql.init_app(app)
 
 
