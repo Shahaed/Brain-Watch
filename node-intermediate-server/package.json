@@ -4,7 +4,7 @@
   "description": "this receives all the data from the accelerometer and sends it to a server",
   "main": "device-search.js",
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.21.1",
     "brain": "^0.7.0",
     "mysql": "^2.15.0",
     "noble": "^1.8.1",
